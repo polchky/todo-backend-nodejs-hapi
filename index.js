@@ -65,7 +65,7 @@ server.register([
 
 server.route({
     method: 'GET',
-    path: '/todos',
+    path: '/todos/',
     handler: function (request, reply) {
         var result = [];
         for(var key in todos) {
@@ -89,7 +89,7 @@ server.route({
 
 server.route({
     method: 'DELETE',
-    path: '/todos',
+    path: '/todos/',
     handler: function (request, reply) {
         todos = {};
         reply();
@@ -105,7 +105,7 @@ server.route({
 
 server.route({
     method: 'POST',
-    path: '/todos',
+    path: '/todos/',
     handler: function (request, reply) {
         todos[nextId] = {
             title: request.payload.title,
